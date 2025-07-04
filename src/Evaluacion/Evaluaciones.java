@@ -5,27 +5,34 @@
 package Evaluacion;
 
 import Curso.Cursos;
+import Docentes.Docente;
 
 /**
  *
  * @author danny
  */
 public class Evaluaciones {
+
     private Cursos Curso;
     private double nota;
     private String observaciones;
+    private Docente Docente;
 
-    public Evaluaciones(Cursos Curso, double nota, String observaciones) {
+    public Evaluaciones(Cursos Curso, double nota, String observaciones, Docente Docente) {
         this.Curso = Curso;
         this.nota = nota;
         this.observaciones = observaciones;
+        this.Docente = Docente;
     }
 
     public boolean satisfactorio() {
         return nota > 8.0;
     }
-    
-    
+
+    public Docente getDocente() {
+        return Docente;
+    }
+
     public Cursos getCurso() {
         return Curso;
     }
@@ -49,6 +56,9 @@ public class Evaluaciones {
     public void setObservaciones(String observaciones) {
         this.observaciones = observaciones;
     }
-    
-    
+
+    public void setDocente(Docente Docente) {
+        this.Docente = Docente;
+    }
+
 }
