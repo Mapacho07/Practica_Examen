@@ -13,12 +13,14 @@ import Docentes.Docente;
  */
 public class Evaluaciones {
 
+    private int Idevaluacion;
     private Cursos Curso;
     private double nota;
     private String observaciones;
     private Docente Docente;
 
-    public Evaluaciones(Cursos Curso, double nota, String observaciones, Docente Docente) {
+    public Evaluaciones(int Idevaluacion, Cursos Curso, double nota, String observaciones, Docente Docente) {
+        this.Idevaluacion = Idevaluacion;
         this.Curso = Curso;
         this.nota = nota;
         this.observaciones = observaciones;
@@ -27,6 +29,10 @@ public class Evaluaciones {
 
     public boolean satisfactorio() {
         return nota > 8.0;
+    }
+
+    public int getIdevaluacion() {
+        return Idevaluacion;
     }
 
     public Docente getDocente() {
